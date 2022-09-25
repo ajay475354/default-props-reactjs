@@ -9,19 +9,17 @@ class App extends Component {
     isLoggedIn: false,
   }
 
-  renderAuthButton = () => {
-    const {isLoggedIn} = this.state
-    if (isLoggedIn === true) {
-      return <button type="button">Logout</button>
-    }
-    return <button type="button">Login</button>
-  }
-
   render() {
+    let authButton
+    if (isLoggedIn === true) {
+      authButton = <button>logout</button>
+    } else {
+      authButton = <button>loggin</button>
+    }
     return (
       <div className="container">
         <Welcome greeting="Hello" name="User" />
-        {this.renderAuthButton()}
+        {authButton}
       </div>
     )
   }
