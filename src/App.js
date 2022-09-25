@@ -13,9 +13,9 @@ class App extends Component {
     const {isLoggedIn} = this.state
     return (
       <div className="container">
-        <Welcome greeting="Hello" name="User" />
+        <Welcome />
         {isLoggedIn && <button>logout</button>}
-        {!isLoggedIn && <button>login</button>}
+        {!isLoggedIn && <button>loggin</button>}
       </div>
     )
   }
